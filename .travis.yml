@@ -7,7 +7,7 @@ install:
 
 before_script:
   - mkdir -p .build
-  - helm package -d .build $(ls -d */)
+  - helm package --save=false -d .build $(ls -d */)
   - helm repo index .build
 
 script:
