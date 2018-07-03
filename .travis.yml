@@ -1,0 +1,24 @@
+before_install:
+  - sudo apt-get update
+  - sudo apt-get -y install curl
+
+install:
+  - curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get | sudo bash
+
+before_script:
+  - mkdir -p .build
+  - helm package -d .build $(ls -d */)
+  - helm repo index .build
+
+script:
+  - echo ok
+
+deploy:
+  provider: pages
+  fqdn: chart.mixhub.cn
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: false
+  local-dir: .build
+  on:
+    branch: master
