@@ -1,0 +1,21 @@
+apiVersion: v1
+entries:
+  nginx:
+  - created: 2018-07-04T13:02:03.79802818Z
+    description: Nginx web server
+    digest: 6d7b52d2fae8a35e42d44137c21ea34f64df6df50cf56e83f1e1f62bae5b3434
+    home: https://nginx.org
+    icon: https://avatars0.githubusercontent.com/u/1412239?s=200&v=4
+    keywords:
+    - web
+    - nginx
+    maintainers:
+    - email: zhiweik@gmail.com
+      name: Zhiwei
+    name: nginx
+    sources:
+    - https://hub.docker.com/r/siji/nginx
+    urls:
+    - nginx-1.12.2.tgz
+    version: 1.12.2
+generated: 2018-07-04T13:02:03.796973172Z
